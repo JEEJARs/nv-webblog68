@@ -21,8 +21,8 @@ const router = createRouter({
     },
     {
       path: '/user/edit/:userId',
-      name: 'user-edit',
-      component: UserEdit
+    name: 'user-edit',
+    component: UserEdit
     },
     {
       path: '/user/:userId',
