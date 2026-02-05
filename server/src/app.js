@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 // เรียกใช้ Routes ที่เราแยกไฟล์ไว้
+require('./userPassport')
 require('./routes')(app)
 
 sequelize.sync({ force: false }).then(() => {

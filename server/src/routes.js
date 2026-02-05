@@ -1,5 +1,6 @@
 const UserController = require('./controllers/UserController')
 const UserAuthenController = require('./controllers/UserAuthenController')
+const isAuthenController = require('./controllers/isAuthenController')
 
 module.exports = (app) => { 
     // create user
@@ -11,7 +12,7 @@ module.exports = (app) => {
     // get user by id
     app.get('/user/:userId', UserController.show)
     // get all user
-    app.get('/users', UserController.index)
+    app.get('/users', isAuthenController, UserController.index)
 
     // Route สำหรับสมัครสมาชิก
     app.post('/login', UserAuthenController.login)
