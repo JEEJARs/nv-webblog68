@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+     <back-header /> // เพิ่ม component back-header
     <router-view />
   </div>
 </template>

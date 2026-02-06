@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import BackHeader from './components/Header.vue'
 
 import './style.css'
 import App from './App.vue'
@@ -12,4 +13,6 @@ pinia.use(piniaPluginPersistedstate)
  
 app.use(pinia)
 app.use(router) // ใช้งาน Router
+app.component('back-header', BackHeader)
 app.mount('#app') // แปะลงไปที่ id="app" ใน index.html
+
